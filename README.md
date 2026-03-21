@@ -1,0 +1,2 @@
+# automind
+Landing Page
