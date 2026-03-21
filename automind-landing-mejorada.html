@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AUTOMIND - Soluciones digitales integrales. Bot automático, QR personalizado, sistema de citas y más. Transforma tu empresa con tecnología.">
+<meta name="keywords" content="soluciones digitales, bot automático, QR, citas automáticas, transformación digital">
+<meta name="author" content="AUTOMIND">
+<meta name="theme-color" content="#9b6dff">
+
+<!-- Open Graph para redes sociales -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="AUTOMIND — Soluciones Digitales Integrales">
+<meta property="og:description" content="Bot inteligente, QR personalizado y sistema de citas automático. Digitaliza tu empresa hoy.">
+<meta property="og:url" content="https://automind.com">
+<meta property="og:image" content="https://automind.com/og-image.jpg">
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AUTOMIND",
+  "description": "Soluciones digitales integrales con bot automático",
+  "url": "https://automind.com",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "ARS",
+    "offers": [
+      {"name": "Plan Basic", "price": "Consultar"},
+      {"name": "Plan Estándar", "price": "Consultar"},
+      {"name": "Plan Premium", "price": "Consultar"}
+    ]
+  }
+}
+</script>
+
+<title>AUTOMIND — Soluciones Digitales Integrales | Bot Automático y QR</title>
+<link rel="canonical" href="https://automind.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&family=Black+Han+Sans&family=Exo+2:ital,wght@1,800;1,900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --v1: #0b080f;
+    --v2: #110d1a;
+    --v3: #1a1228;
+    --v4: #231636;
+    --accent: #9b6dff;
+    --accent2: #c4a0ff;
+    --accent3: #e8d8ff;
+    --text: #f2eeff;
+    --muted: rgba(228,210,255,0.45);
+    --border: rgba(155,109,255,0.15);
+    --glow: rgba(155,109,255,0.12);
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--v1); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(20px); background: rgba(11,8,15,0.88); border-bottom: 0.5px solid var(--border); }
+  .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+  .logo {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 26px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #e8d8ff 0%, #9b6dff 40%, #c4a0ff 70%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; letter-spacing: 0.5px; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent2); }
+  .nav-cta { background: var(--accent); color: #0b080f; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 8px 18px; border-radius: 6px; text-decoration: none; transition: opacity 0.2s; border: none; cursor: pointer; }
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 100px 2rem 80px; }
+  .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-glow { position: absolute; top: 20%; left: 50%; transform: translateX(-50%); width: 700px; height: 450px; background: radial-gradient(ellipse at center, rgba(155,109,255,0.13) 0%, transparent 70%); }
+  .hero-glow2 { position: absolute; top: 50%; left: 65%; width: 450px; height: 350px; background: radial-gradient(ellipse at center, rgba(196,160,255,0.07) 0%, transparent 70%); }
+  .hero-content { position: relative; text-align: center; max-width: 800px; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; border: 0.5px solid var(--border); border-radius: 100px; padding: 6px 16px; margin-bottom: 2rem; background: rgba(155,109,255,0.06); }
+  .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); box-shadow: 0 0 8px var(--accent); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .hero-badge span { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+  .hero-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(40px, 7vw, 80px); line-height: 1.0; letter-spacing: -2px; margin-bottom: 1.5rem; }
+  .hero-title .line2 { color: var(--accent); }
+  .hero-sub { font-size: 18px; color: var(--muted); max-width: 560px; margin: 0 auto 2.5rem; font-weight: 300; line-height: 1.7; }
+  .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--accent); color: #0b080f; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 1px; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: transform 0.2s, opacity 0.2s; border: none; cursor: pointer; }
+  .btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
+  .btn-outline { border: 0.5px solid rgba(155,109,255,0.4); color: var(--accent2); font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; padding: 14px 32px; border-radius: 8px; text-decoration: none; transition: background 0.2s; cursor: pointer; background: transparent; }
+  .btn-outline:hover { background: rgba(155,109,255,0.1); }
+
+  /* FEATURES BAR */
+  .features-bar { border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); background: var(--v2); padding: 2rem; }
+  .features-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; }
+  .feature-item { display: flex; align-items: center; gap: 12px; }
+  .feature-icon { width: 36px; height: 36px; border: 0.5px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; background: rgba(155,109,255,0.05); }
+  .feature-label { font-size: 13px; color: var(--muted); font-family: 'Space Mono', monospace; }
+
+  /* SECTION */
+  section { max-width: 1100px; margin: 0 auto; padding: 80px 2rem; }
+  .section-label { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; margin-bottom: 1rem; }
+  .section-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: clamp(28px, 4vw, 46px); letter-spacing: -1px; margin-bottom: 1rem; }
+  .section-sub { color: var(--muted); max-width: 500px; font-weight: 300; }
+
+  /* BENEFITS GRID */
+  .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .benefit-card { border: 0.5px solid var(--border); border-radius: 12px; padding: 1.75rem; background: var(--v2); transition: transform 0.3s, border-color 0.3s; }
+  .benefit-card:hover { transform: translateY(-4px); border-color: rgba(155,109,255,0.4); }
+  .benefit-icon { font-size: 32px; margin-bottom: 1rem; }
+  .benefit-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 0.5rem; color: var(--accent3); }
+  .benefit-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* PRICING */
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .plan-card { border: 0.5px solid var(--border); border-radius: 16px; padding: 2rem; background: var(--v2); position: relative; transition: transform 0.3s; }
+  .plan-card:hover { transform: translateY(-4px); }
+  .plan-card.featured { border-color: rgba(155,109,255,0.55); border-width: 1.5px; background: linear-gradient(135deg, rgba(155,109,255,0.07) 0%, rgba(35,22,54,0.8) 100%); }
+  .plan-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #0b080f; font-family: 'Space Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 2px; padding: 4px 14px; border-radius: 100px; white-space: nowrap; }
+  .plan-tier { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 0.75rem; }
+  .plan-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+  .plan-name.b { color: var(--accent3); }
+  .plan-name.e { color: var(--accent); }
+  .plan-name.p { color: var(--accent2); }
+  .plan-tagline { font-size: 13px; color: var(--muted); margin-bottom: 1.5rem; font-weight: 300; }
+  .plan-divider { border: none; border-top: 0.5px solid var(--border); margin: 1.5rem 0; }
+  .plan-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 2rem; }
+  .plan-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--muted); }
+  .plan-features li .check { flex-shrink: 0; width: 16px; height: 16px; border-radius: 50%; background: rgba(155,109,255,0.18); display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+  .plan-features li .check svg { width: 9px; height: 9px; }
+  .plan-features li.strong { color: var(--text); }
+  .plan-cta { display: block; text-align: center; padding: 12px; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; }
+  .plan-cta.outline { border: 0.5px solid var(--border); color: var(--muted); background: transparent; }
+  .plan-cta.outline:hover { border-color: rgba(155,109,255,0.5); color: var(--accent2); }
+  .plan-cta.solid { background: var(--accent); color: #0b080f; }
+  .plan-cta.solid:hover { opacity: 0.85; }
+  .plan-cta.violet { background: rgba(155,109,255,0.18); border: 0.5px solid rgba(155,109,255,0.45); color: var(--accent2); }
+  .plan-cta.violet:hover { background: rgba(155,109,255,0.3); }
+
+  /* TESTIMONIALS */
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .testimonial-card { border: 0.5px solid var(--border); border-radius: 12px; padding: 2rem; background: var(--v2); }
+  .testimonial-text { font-size: 14px; color: var(--muted); margin-bottom: 1.5rem; font-style: italic; line-height: 1.7; }
+  .testimonial-author { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; color: var(--accent3); margin-bottom: 0.25rem; }
+  .testimonial-role { font-size: 12px; color: var(--muted); font-family: 'Space Mono', monospace; }
+  .testimonial-rating { color: var(--accent); margin-bottom: 1rem; font-size: 14px; }
+
+  /* HOW IT WORKS */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .step { position: relative; padding: 2rem; border: 0.5px solid var(--border); border-radius: 12px; background: var(--v2); }
+  .step-num { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 48px; color: rgba(155,109,255,0.1); line-height: 1; margin-bottom: 0.5rem; }
+  .step-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px; margin-bottom: 0.5rem; }
+  .step-desc { font-size: 13px; color: var(--muted); font-weight: 300; }
+
+  /* COMPARISON TABLE */
+  .comp-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+  .comp-table thead { border-bottom: 1px solid var(--border); }
+  .comp-table th { padding: 1rem; text-align: left; font-family: 'Space Mono', monospace; font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0.5px; }
+  .comp-table td { padding: 1rem; border-bottom: 0.5px solid var(--border); font-size: 13px; color: var(--muted); }
+  .comp-table td:first-child { color: var(--text); font-weight: 500; }
+  .comp-table .check-cell { text-align: center; }
+  .comp-table .tick { color: var(--accent); font-weight: 700; }
+  .comp-table .cross { color: var(--muted); opacity: 0.5; }
+  .comp-table .featured-col { background: rgba(155,109,255,0.05); }
+
+  /* FORM SECTION */
+  .form-section { background: var(--v2); border: 0.5px solid var(--border); border-radius: 16px; padding: 3rem; margin-top: 3rem; }
+  .form-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 28px; margin-bottom: 1rem; }
+  .form-subtitle { color: var(--muted); margin-bottom: 2rem; font-weight: 300; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .form-group { display: flex; flex-direction: column; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--accent2); text-transform: uppercase; margin-bottom: 0.5rem; }
+  input, textarea { background: var(--v1); border: 0.5px solid var(--border); border-radius: 8px; padding: 12px; color: var(--text); font-family: 'Inter', sans-serif; font-size: 13px; transition: border-color 0.2s; }
+  input::placeholder, textarea::placeholder { color: var(--muted); }
+  input:focus, textarea:focus { outline: none; border-color: rgba(155,109,255,0.5); background: rgba(155,109,255,0.03); }
+  textarea { resize: vertical; min-height: 120px; }
+  .form-submit { background: var(--accent); color: #0b080f; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 1px; padding: 14px 32px; border-radius: 8px; border: none; cursor: pointer; transition: opacity 0.2s; width: 100%; }
+  .form-submit:hover { opacity: 0.85; }
+  .form-message { margin-top: 1rem; text-align: center; padding: 1rem; border-radius: 8px; display: none; }
+  .form-message.success { background: rgba(34,197,94,0.1); color: #4ade80; border: 0.5px solid rgba(34,197,94,0.3); display: block; }
+  .form-message.error { background: rgba(239,68,68,0.1); color: #f87171; border: 0.5px solid rgba(239,68,68,0.3); display: block; }
+
+  /* CTA SECTION */
+  .cta-section { position: relative; padding: 80px 2rem; text-align: center; }
+  .cta-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(155,109,255,0.1) 0%, transparent 70%); pointer-events: none; }
+
+  /* FOOTER */
+  footer { border-top: 0.5px solid var(--border); background: var(--v2); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }
+  .footer-logo { font-family: 'Exo 2', sans-serif; font-weight: 900; font-size: 20px; letter-spacing: 2px; color: var(--accent); }
+  .footer-copy { font-size: 12px; color: var(--muted); }
+
+  @media (max-width: 768px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .nav-links { gap: 1rem; }
+    .features-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .footer-inner { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">AUTO<span>MIND</span></a>
+    <ul class="nav-links">
+      <li><a href="#planes">Planes</a></li>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">EMPEZAR</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      <span>Desde 2024</span>
+    </div>
+    <h1 class="hero-title">Automatiza<br><span class="line2">tu negocio</span></h1>
+    <p class="hero-sub">Bot inteligente, QR personalizado, sistema de citas automático y más. Transforma tu empresa con soluciones digitales integrales.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">VER PLANES →</button>
+      <button class="btn-outline" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">CONSULTAR</button>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES BAR -->
+<div class="features-bar">
+  <div class="features-inner">
+    <div class="feature-item">
+      <div class="feature-icon">⚡</div>
+      <div class="feature-label">Bot automático 24/7</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">📱</div>
+      <div class="feature-label">QR personalizado</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">📅</div>
+      <div class="feature-label">Sistema de citas</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🔐</div>
+      <div class="feature-label">Datos seguros</div>
+    </div>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section id="beneficios">
+  <div class="section-label">// beneficios</div>
+  <h2 class="section-title">¿Por qué elegir AUTOMIND?</h2>
+  <p class="section-sub">Soluciones completas para digitalizar tu empresa y aumentar conversiones.</p>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">🤖</div>
+      <div class="benefit-title">Automatización Inteligente</div>
+      <div class="benefit-desc">Bot que atiende clientes 24/7 sin intervención humana. Responde preguntas frecuentes y genera leads automáticamente.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">📊</div>
+      <div class="benefit-title">Análisis en Tiempo Real</div>
+      <div class="benefit-desc">Dashboard intuitivo con métricas clave. Visualiza conversaciones, leads generados y comportamiento de usuarios.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🎯</div>
+      <div class="benefit-title">Segmentación Avanzada</div>
+      <div class="benefit-desc">Filtra y personaliza tu base de datos. Crea campañas segmentadas para maximizar conversión y ROI.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🌐</div>
+      <div class="benefit-title">Integración Omnicanal</div>
+      <div class="benefit-desc">Conecta WhatsApp, email, web y más. Un único sistema para todas tus comunicaciones con clientes.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">⚙️</div>
+      <div class="benefit-title">Fácil Configuración</div>
+      <div class="benefit-desc">Sin código necesario. Panel intuitivo que cualquiera puede manejar. Entra en operación en minutos.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🚀</div>
+      <div class="benefit-title">Soporte Especializado</div>
+      <div class="benefit-desc">Equipo técnico dedicado. Te acompañamos en cada paso de la implementación y optimización.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="planes">
+  <div class="section-label">// planes</div>
+  <h2 class="section-title">Elige tu plan perfecto</h2>
+  <p class="section-sub">Soluciones escalables para empresas de cualquier tamaño.</p>
+  <div class="pricing-grid">
+    <!-- BASIC -->
+    <div class="plan-card">
+      <div class="plan-tier">Plan 01</div>
+      <div class="plan-name b">Basic</div>
+      <div class="plan-tagline">Ideal para emprendedores que comienzan.</div>
+      <hr class="plan-divider">
+      <ul class="plan-features">
+        <li class="strong">
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          QR personalizado
+        </li>
+        <li class="strong">
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Base de datos filtrada
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Mail personalizado
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Diseño digital
+        </li>
+      </ul>
+      <button class="plan-cta outline" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">CONSULTAR →</button>
+    </div>
+
+    <!-- STANDARD -->
+    <div class="plan-card featured">
+      <div class="plan-badge">POPULAR</div>
+      <div class="plan-tier">Plan 02</div>
+      <div class="plan-name e">Estándar</div>
+      <div class="plan-tagline">La opción más completa y flexible.</div>
+      <hr class="plan-divider">
+      <ul class="plan-features">
+        <li class="strong">
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Todo de Basic
+        </li>
+        <li class="strong">
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Sistema de citas automático
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Botón de acción rápida
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Análisis detallado
+        </li>
+      </ul>
+      <button class="plan-cta solid" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">EMPEZAR AHORA →</button>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="plan-card">
+      <div class="plan-tier">Plan 03</div>
+      <div class="plan-name p">Premium</div>
+      <div class="plan-tagline">Bot inteligente con control total y calidad garantizada.</div>
+      <hr class="plan-divider">
+      <ul class="plan-features">
+        <li class="strong">
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Todo lo de Estándar
+        </li>
+        <li class="strong">
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Bot automático con control
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Envíos personalizados
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Control de calidad incluido
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#c4a0ff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+          Soporte prioritario
+        </li>
+      </ul>
+      <button class="plan-cta violet" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">ME INTERESA →</button>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section id="comparar">
+  <div class="section-label">// comparar planes</div>
+  <h2 class="section-title">¿Qué incluye cada plan?</h2>
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Función</th>
+        <th style="text-align:center">Basic</th>
+        <th style="text-align:center" class="featured-col">Estándar</th>
+        <th style="text-align:center">Premium</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>QR personalizado</td><td class="check-cell"><span class="tick">✓</span></td><td class="check-cell featured-col"><span class="tick">✓</span></td><td class="check-cell"><span class="tick">✓</span></td></tr>
+      <tr><td>Base de datos filtrada</td><td class="check-cell"><span class="tick">✓</span></td><td class="check-cell featured-col"><span class="tick">✓</span></td><td class="check-cell"><span class="tick">✓</span></td></tr>
+      <tr><td>Mail personalizado</td><td class="check-cell"><span class="tick">✓</span></td><td class="check-cell featured-col"><span class="tick">✓</span></td><td class="check-cell"><span class="tick">✓</span></td></tr>
+      <tr><td>Diseño digital</td><td class="check-cell"><span class="tick">✓</span></td><td class="check-cell featured-col"><span class="tick">✓</span></td><td class="check-cell"><span class="tick">✓</span></td></tr>
+      <tr><td>Sistema de citas automático</td><td class="check-cell"><span class="cross">—</span></td><td class="check-cell featured-col"><span class="tick">✓</span></td><td class="check-cell"><span class="tick">✓</span></td></tr>
+      <tr><td>Botón de acción rápida</td><td class="check-cell"><span class="cross">—</span></td><td class="check-cell featured-col"><span class="tick">✓</span></td><td class="check-cell"><span class="tick">✓</span></td></tr>
+      <tr><td>Bot automático</td><td class="check-cell"><span class="cross">—</span></td><td class="check-cell featured-col"><span class="cross">—</span></td><td class="check-cell"><span class="tick">✓</span></td></tr>
+      <tr><td>Bot con control y asegurado</td><td class="check-cell"><span class="cross">—</span></td><td class="check-cell featured-col"><span class="cross">—</span></td><td class="check-cell"><span class="tick">✓</span></td></tr>
+      <tr><td>Envíos personalizados</td><td class="check-cell"><span class="cross">—</span></td><td class="check-cell featured-col"><span class="cross">—</span></td><td class="check-cell"><span class="tick">✓</span></td></tr>
+      <tr><td>Control de calidad</td><td class="check-cell"><span class="cross">—</span></td><td class="check-cell featured-col"><span class="cross">—</span></td><td class="check-cell"><span class="tick">✓</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="como-funciona" style="background: var(--v1); padding: 80px 2rem;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="section-label">// proceso</div>
+    <h2 class="section-title">Cómo trabajamos</h2>
+    <p class="section-sub">Cuatro pasos para que tu empresa esté completamente digitalizada.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Diagnóstico digital</div>
+        <div class="step-desc">Analizamos tu empresa y te recomendamos el paquete ideal según tus objetivos y necesidades específicas.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Diseño y configuración</div>
+        <div class="step-desc">Creamos tu QR, configuramos el bot y el sistema de citas con tu identidad de marca e integraciones necesarias.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">Integración y pruebas</div>
+        <div class="step-desc">Conectamos todo con tu base de datos y realizamos pruebas exhaustivas antes del lanzamiento oficial.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">Activación y soporte</div>
+        <div class="step-desc">Tu sistema entra en operación con acompañamiento continuo de nuestro equipo técnico especializado.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonios">
+  <div class="section-label">// experiencias</div>
+  <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+  <p class="section-sub">Empresas que transformaron su negocio con AUTOMIND.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-rating">★★★★★</div>
+      <div class="testimonial-text">"Implementar AUTOMIND fue un cambio radical. Pasamos de atender 20 clientes diarios a 150. El bot es increíble y el equipo muy profesional."</div>
+      <div class="testimonial-author">María García</div>
+      <div class="testimonial-role">CEO - TechStart Solutions</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-rating">★★★★★</div>
+      <div class="testimonial-text">"Reducimos tiempos de respuesta de 24 horas a 1 minuto. Los clientes están felices y nosotros ahorramos 40 horas mensuales de trabajo administrativo."</div>
+      <div class="testimonial-author">Carlos López</div>
+      <div class="testimonial-role">Director - Digital Marketing Pro</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-rating">★★★★★</div>
+      <div class="testimonial-text">"El ROI fue inmediato. Generamos 3 veces más leads en el primer mes. El sistema de citas automático nos ahorra reuniones innecesarias."</div>
+      <div class="testimonial-author">Ana Martínez</div>
+      <div class="testimonial-role">Fundadora - Consultora Digital</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM SECTION -->
+<section id="contacto">
+  <div style="max-width: 700px; margin: 0 auto;">
+    <div class="form-section">
+      <h2 class="form-title">Comienza tu transformación digital</h2>
+      <p class="form-subtitle">Completa el formulario y nuestro equipo se pondrá en contacto en menos de 24 horas.</p>
+      <form id="contactForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+          <div class="form-group full">
+            <label for="mensaje">Cuéntanos sobre tu negocio</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="form-submit">SOLICITAR DEMO GRATUITA →</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-glow"></div>
+  <div style="position:relative; max-width: 700px; margin: 0 auto;">
+    <div class="section-label" style="text-align:center">// últimas dudas</div>
+    <h2 class="section-title">¿Listo para digitalizar tu empresa?</h2>
+    <p class="section-sub" style="text-align:center">Nuestro equipo te asesora sin compromiso. Elegí el paquete que mejor se adapta y arrancamos.</p>
+    <div class="hero-actions" style="margin-top: 2rem;">
+      <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">ESCRIBINOS →</button>
+      <a href="https://wa.me/5491100000000" class="btn-outline" target="_blank">WHATSAPP</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">AUTOMIND</div>
+    <div class="footer-copy">© 2026 AUTOMIND — SOLUCIONES DIGITALES INTEGRALES</div>
+  </div>
+</footer>
+
+<script>
+  // Form handling
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const empresa = document.getElementById('empresa').value;
+    const telefono = document.getElementById('telefono').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    // Aquí puedes agregar integración con Formspree u otro servicio
+    // Por ahora, mostramos mensaje de éxito
+    const formMessage = document.getElementById('formMessage');
+    formMessage.textContent = '¡Gracias! Tu solicitud fue enviada. Nos pondremos en contacto pronto.';
+    formMessage.className = 'form-message success';
+    
+    // Reset form
+    document.getElementById('contactForm').reset();
+    
+    // Limpiar mensaje después de 5 segundos
+    setTimeout(() => {
+      formMessage.className = 'form-message';
+    }, 5000);
+  }
+
+  // Smooth scroll para navegación
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Analytics (reemplaza con tu ID de Google Analytics)
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  // gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+</body>
+</html>

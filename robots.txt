@@ -1,0 +1,32 @@
+# Robots.txt - Configuración para motores de búsqueda
+# Este archivo ayuda a Google, Bing y otros buscadores a indexar tu sitio correctamente
+
+# Permitir a todos los bots
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tudominio.com/sitemap.xml
+
+# Específico para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Específico para Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# No indexar archivos específicos (si existen)
+Disallow: /private/
+Disallow: /admin/
+Disallow: /*.php
+Disallow: /*.aspx
+
+# Permitir acceso a assets
+User-agent: *
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
